@@ -23,7 +23,7 @@ public class Tank : MonoBehaviour
     float moveSpeedReverse = 0f;
     float moveAcceleration = 0.1f;
     float moveDeceleration = 0.20f;
-    float moveSpeedMax = 4f;
+    float moveSpeedMax = 6f;
 
     bool rotateRight = false;
     bool rotateLeft = false;
