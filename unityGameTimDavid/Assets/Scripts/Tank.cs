@@ -9,8 +9,6 @@ public class Tank : MonoBehaviour
     /////                   VARS                    /////  
     /////*******************************************/////
 
-    public Track trackLeft;
-    public Track trackRight;
 
     public string keyMoveForward;
     public string keyMoveReverse;
@@ -89,31 +87,6 @@ public class Tank : MonoBehaviour
         }
         transform.Translate(0f, moveSpeedReverse * Time.deltaTime * -1f, 0f);
 
-        if (moveForward | moveReverse | rotateRight | rotateLeft)
-        {
-            trackStart();
-        }
-        else
-        {
-            trackStop();
-        }
-
-    }
-
-    /////*******************************************/////
-    /////                METHODS                    /////  
-    /////*******************************************/////
-
-    void trackStart()
-    {
-        trackLeft.animator.SetBool("isMoving", true);
-        trackRight.animator.SetBool("isMoving", true);
-    }
-
-    void trackStop()
-    {
-        trackLeft.animator.SetBool("isMoving", false);
-        trackRight.animator.SetBool("isMoving", false);
     }
 
 }
