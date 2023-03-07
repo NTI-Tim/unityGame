@@ -5,15 +5,11 @@ using UnityEngine;
 public class Tank : MonoBehaviour
 {
 
-    /////*******************************************/////
-    /////                   VARS                    /////  
-    /////*******************************************/////
-
-
     public string keyMoveForward;
     public string keyMoveReverse;
     public string keyRotateRight;
     public string keyRotateLeft;
+    public Weapon weapon;
 
     bool moveForward = false;
     bool moveReverse = false;
@@ -31,13 +27,13 @@ public class Tank : MonoBehaviour
     float rotateDeceleration = 10f;
     float rotateSpeedMax = 130f;
 
-
-    /////*******************************************/////
-    /////                 UPDATE                    /////  
-    /////*******************************************/////
-
     void Update()
     {
+
+        if(Input.GetMouseButtonDown(0))
+        {
+            weapon.Fire();
+        }
 
         rotateLeft = (Input.GetKeyDown(keyRotateLeft)) ? true : rotateLeft;
         rotateLeft = (Input.GetKeyUp(keyRotateLeft)) ? false : rotateLeft;
