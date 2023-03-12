@@ -9,7 +9,10 @@ public class Tank : MonoBehaviour
     public string keyMoveReverse;
     public string keyRotateRight;
     public string keyRotateLeft;
-    public Weapon weapon;
+    public BlueWeapon blueweapon;
+    public RedWeapon redweapon;
+    public string keyBlueFire;
+    public string keyRedFire;
 
     bool moveForward = false;
     bool moveReverse = false;
@@ -30,9 +33,14 @@ public class Tank : MonoBehaviour
     void Update()
     {
 
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(keyBlueFire))
         {
-            weapon.Fire();
+            blueweapon.FireB();
+        }
+
+        if (Input.GetKeyDown(keyRedFire))
+        {
+            redweapon.FireR();
         }
 
         rotateLeft = (Input.GetKeyDown(keyRotateLeft)) ? true : rotateLeft;

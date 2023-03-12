@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 53951234}
   m_Layer: 0
-  m_Name: Fire Point
+  m_Name: Fire Point (B)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 355639078}
   - component: {fileID: 355639080}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: MediumGunC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -865,6 +865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 386584809}
   - component: {fileID: 386584810}
+  - component: {fileID: 386584811}
   m_Layer: 0
   m_Name: MediumGunC
   m_TagString: Untagged
@@ -883,7 +884,8 @@ Transform:
   m_LocalPosition: {x: -0.12, y: 1.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1680992369}
   m_Father: {fileID: 1738341389}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -939,6 +941,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &386584811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386584808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6026a8a58b4154e989796cf35545e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5964500201504636868, guid: 5b9d2bb352605ee4e822257a683fb133, type: 3}
+  firePoint: {fileID: 1680992369}
+  fireForce: 20
 --- !u!1 &393609906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +1096,10 @@ MonoBehaviour:
   keyMoveReverse: s
   keyRotateRight: d
   keyRotateLeft: a
-  weapon: {fileID: 355639080}
+  blueweapon: {fileID: 0}
+  redweapon: {fileID: 0}
+  keyBlueFire: q
+  keyRedFire: .
 --- !u!61 &396272157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4163,6 +4183,37 @@ Transform:
   m_Father: {fileID: 1738341389}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1680992368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680992369}
+  m_Layer: 0
+  m_Name: Fire Point (R)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1680992369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680992368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 386584809}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1686436808
 GameObject:
   m_ObjectHideFlags: 0
@@ -4467,7 +4518,10 @@ MonoBehaviour:
   keyMoveReverse: k
   keyRotateRight: l
   keyRotateLeft: j
-  weapon: {fileID: 0}
+  blueweapon: {fileID: 0}
+  redweapon: {fileID: 0}
+  keyBlueFire: .
+  keyRedFire: u
 --- !u!4 &1738341389
 Transform:
   m_ObjectHideFlags: 0
