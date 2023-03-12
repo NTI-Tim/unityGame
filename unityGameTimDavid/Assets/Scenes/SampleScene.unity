@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 355639078}
   - component: {fileID: 355639080}
   m_Layer: 0
-  m_Name: MediumGunC
+  m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -852,6 +852,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55393346a79ff6243b3e0afca98c9331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5964500201504636868, guid: 5b9d2bb352605ee4e822257a683fb133, type: 3}
+  firePoint: {fileID: 53951234}
+  fireForce: 20
 --- !u!1 &386584808
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1036,6 @@ GameObject:
   - component: {fileID: 396272157}
   - component: {fileID: 396272159}
   - component: {fileID: 396272158}
-  - component: {fileID: 396272160}
   m_Layer: 0
   m_Name: Tank Blue
   m_TagString: Untagged
@@ -1077,6 +1079,7 @@ MonoBehaviour:
   keyMoveReverse: s
   keyRotateRight: d
   keyRotateLeft: a
+  weapon: {fileID: 355639080}
 --- !u!61 &396272157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1150,18 +1153,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.55, y: 1.5}
   m_EdgeRadius: 0
---- !u!114 &396272160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396272154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e8330bf8e80eb54c8f99a3716d7c1cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &478656832
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,8 +2690,6 @@ GameObject:
   m_Component:
   - component: {fileID: 950565770}
   - component: {fileID: 950565769}
-  - component: {fileID: 950565767}
-  - component: {fileID: 950565768}
   m_Layer: 0
   m_Name: Track Right
   m_TagString: Untagged
@@ -2708,39 +2697,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &950565767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950565766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5f9f958b97e80a4bb256271f3996037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 950565768}
---- !u!95 &950565768
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 950565766}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!212 &950565769
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2929,8 +2885,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1080572763}
   - component: {fileID: 1080572764}
-  - component: {fileID: 1080572765}
-  - component: {fileID: 1080572766}
   m_Layer: 0
   m_Name: Track Right
   m_TagString: Untagged
@@ -3005,39 +2959,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1080572765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080572762}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5f9f958b97e80a4bb256271f3996037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1080572766}
---- !u!95 &1080572766
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080572762}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &1092467053
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,8 +3030,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1116056677}
   - component: {fileID: 1116056676}
-  - component: {fileID: 1116056674}
-  - component: {fileID: 1116056675}
   m_Layer: 0
   m_Name: Track Left
   m_TagString: Untagged
@@ -3118,39 +3037,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1116056674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116056673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5f9f958b97e80a4bb256271f3996037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1116056675}
---- !u!95 &1116056675
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1116056673}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!212 &1116056676
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4203,8 +4089,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1666758103}
   - component: {fileID: 1666758102}
-  - component: {fileID: 1666758100}
-  - component: {fileID: 1666758101}
   m_Layer: 0
   m_Name: Track Left
   m_TagString: Untagged
@@ -4212,39 +4096,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1666758100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666758099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5f9f958b97e80a4bb256271f3996037, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1666758101}
---- !u!95 &1666758101
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666758099}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!212 &1666758102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4616,6 +4467,7 @@ MonoBehaviour:
   keyMoveReverse: k
   keyRotateRight: l
   keyRotateLeft: j
+  weapon: {fileID: 0}
 --- !u!4 &1738341389
 Transform:
   m_ObjectHideFlags: 0
