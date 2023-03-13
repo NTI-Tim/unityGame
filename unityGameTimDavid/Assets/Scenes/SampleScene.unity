@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 355639078}
   - component: {fileID: 355639080}
   m_Layer: 0
-  m_Name: MediumGunC
+  m_Name: MediumGunC (B)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -867,7 +867,7 @@ GameObject:
   - component: {fileID: 386584810}
   - component: {fileID: 386584811}
   m_Layer: 0
-  m_Name: MediumGunC
+  m_Name: MediumGunC (R)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   keyMoveReverse: s
   keyRotateRight: d
   keyRotateLeft: a
-  blueweapon: {fileID: 0}
+  blueweapon: {fileID: 355639080}
   redweapon: {fileID: 0}
   keyBlueFire: q
   keyRedFire: .
@@ -4519,7 +4519,7 @@ MonoBehaviour:
   keyRotateRight: l
   keyRotateLeft: j
   blueweapon: {fileID: 0}
-  redweapon: {fileID: 0}
+  redweapon: {fileID: 386584811}
   keyBlueFire: .
   keyRedFire: u
 --- !u!4 &1738341389
