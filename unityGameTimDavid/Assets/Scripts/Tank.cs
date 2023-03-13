@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class Tank : MonoBehaviour
 {
@@ -30,10 +32,19 @@ public class Tank : MonoBehaviour
     float rotateDeceleration = 10f;
     float rotateSpeedMax = 130f;
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Thread.Sleep(3000);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+    }
+
     void Update()
     {
 
-        if(Input.GetKeyDown(keyBlueFire))
+        if (Input.GetKeyDown(keyBlueFire))
         {
             blueweapon.FireB();
         }
