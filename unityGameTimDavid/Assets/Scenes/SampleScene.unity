@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 396272158}
   m_Layer: 0
   m_Name: Tank Blue
-  m_TagString: Untagged
+  m_TagString: TankBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4757,7 +4757,7 @@ GameObject:
   - component: {fileID: 1738341385}
   m_Layer: 0
   m_Name: Tank Red
-  m_TagString: Untagged
+  m_TagString: TankRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
