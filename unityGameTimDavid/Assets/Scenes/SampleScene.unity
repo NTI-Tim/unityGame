@@ -765,7 +765,6 @@ GameObject:
   - component: {fileID: 266575248}
   - component: {fileID: 266575250}
   - component: {fileID: 266575249}
-  - component: {fileID: 266575251}
   m_Layer: 5
   m_Name: Scoreboard Red
   m_TagString: Untagged
@@ -835,18 +834,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266575247}
   m_CullTransparentMesh: 1
---- !u!114 &266575251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 266575247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c5d2c98d7fe0c4491523051e74ce6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &355639077
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1180,9 @@ MonoBehaviour:
   redweapon: {fileID: 0}
   keyBlueFire: q
   keyRedFire: .
+  scoreInt: 0
+  score: {fileID: 266575249}
+  canvas: {fileID: 655010371}
 --- !u!61 &396272157
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3969,7 +3959,6 @@ GameObject:
   - component: {fileID: 1423448074}
   - component: {fileID: 1423448076}
   - component: {fileID: 1423448075}
-  - component: {fileID: 1423448077}
   m_Layer: 5
   m_Name: Scoreboard Blue
   m_TagString: Untagged
@@ -4039,18 +4028,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423448073}
   m_CullTransparentMesh: 1
---- !u!114 &1423448077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423448073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c5d2c98d7fe0c4491523051e74ce6b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1603937529
 GameObject:
   m_ObjectHideFlags: 0
@@ -4878,6 +4855,9 @@ MonoBehaviour:
   redweapon: {fileID: 386584811}
   keyBlueFire: .
   keyRedFire: u
+  scoreInt: 0
+  score: {fileID: 1423448075}
+  canvas: {fileID: 655010371}
 --- !u!4 &1738341389
 Transform:
   m_ObjectHideFlags: 0

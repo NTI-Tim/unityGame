@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Threading;
+using UnityEngine.UI;
 
 public class Tank : MonoBehaviour
 {
@@ -32,15 +33,34 @@ public class Tank : MonoBehaviour
     float rotateDeceleration = 10f;
     float rotateSpeedMax = 130f;
 
+    public int scoreInt = 0;
+
+    public Text score;
+
+    public Canvas canvas;
+
     //public GameObject Scoreboard Blue;
     //public GameObject Scoreboard Red;
 
+    void Awake()
+    {
+        score.text = score.ToString();
+        DontDestroyOnLoad(canvas);
+    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
+
+
         if (collision.gameObject.tag == "Bullet")
         {
-            Destroy(gameObject);
             Thread.Sleep(3000);
+            scoreInt += 1;
+            scoreInt.ToString();
+            score.text = scoreInt.ToString();
+            Debug.Log(scoreInt.ToString());
+
+
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
