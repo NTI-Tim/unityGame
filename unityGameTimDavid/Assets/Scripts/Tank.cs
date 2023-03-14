@@ -32,10 +32,14 @@ public class Tank : MonoBehaviour
     float rotateDeceleration = 10f;
     float rotateSpeedMax = 130f;
 
+    //public GameObject Scoreboard Blue;
+    //public GameObject Scoreboard Red;
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Bullet")
         {
+            Destroy(gameObject);
             Thread.Sleep(3000);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
