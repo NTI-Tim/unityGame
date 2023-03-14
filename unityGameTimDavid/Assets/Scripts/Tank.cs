@@ -35,20 +35,6 @@ public class Tank : MonoBehaviour
     float rotateDeceleration = 10f;
     float rotateSpeedMax = 130f;
 
-
-    public int scoreInt = 0;
-    public Text score;
-    public Canvas canvas;
-
-    //public GameObject Scoreboard Blue;
-    //public GameObject Scoreboard Red;
-
-    void Awake()
-    {
-        score.text = score.ToString();
-        DontDestroyOnLoad(canvas);
-    }
-
     // Check for collision
     void OnCollisionEnter2D(Collision2D collision)
     {
@@ -57,23 +43,9 @@ public class Tank : MonoBehaviour
         if (collision.gameObject.tag == "Bullet")
         {
             Thread.Sleep(3000);
-            scoreInt += 1;
-            scoreInt.ToString();
-            score.text = scoreInt.ToString();
-            Debug.Log(scoreInt.ToString());
-
-            //if (gameObject.tag == "TankBlue")
-            //{
-             //   gameObject.tag.setactive(false);
-           // }
-
-            //if (gameObject.tag == "TankRed")
-           // {
-           //     gameObject.tag.setactive(false);
-           // }
-
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
     }
 
     void Update()
